@@ -1,0 +1,23 @@
+# Python packages used by the notebooks in notebooks/.
+# Python 3.13 on Kaggle (training, INSTANCE build, evaluation); 3.12 on the local PC (STEAD subset build).
+# Pinned versions are the ones printed in the run logs; the rest were not recorded, so they are unpinned.
+# Standard-library modules (os, json, glob, re, subprocess, tarfile, ...) are not listed.
+# config.py, utilities.py, torch_tools.py and autoencoder_1D_models_torch.py come from the authors' repository
+# (yinjiuxun/WaveDecompNet-paper, commit afe2536cf29ead8b4d8d5c50ddf85cc1dd90ddd1), not from pip.
+
+# all notebooks
+numpy>=2.1,<2.2      # 2.1.3 on Kaggle, 2.1.1 locally; the authors' code needs np.inf (NumPy 2)
+pandas==2.2.3
+h5py==3.16.0
+matplotlib
+
+# training, INSTANCE build and evaluation (Kaggle)
+torch==2.11.0        # Kaggle build 2.11.0+cu130, Tesla T4
+scipy
+scikit-learn         # explained_variance_score, train/test split
+psutil               # dat-none-linear
+
+# STEAD preparation
+gdown==6.5.1         # 01_build_stead_subset (local PC)
+obspy                # installed by 02_prepare_stead_data (pip install -q obspy torchinfo)
+torchinfo
