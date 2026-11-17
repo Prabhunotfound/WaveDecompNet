@@ -1,0 +1,17 @@
+{
+  "model_name": "Branch_Encoder_Decoder_Transformer_fixed",
+  "bottleneck": "Transformer_fixed",
+  "torch_seed": 99,
+  "epochs": 100,
+  "subset": null,
+  "data": "/kaggle/input/datasets/prabhanshu22/wdn-training-data/training_datasets_all_snr_40_unshuffled.hdf5",
+  "n_train": 112200,
+  "n_val": 37400,
+  "n_params": 178058,
+  "runtime_s": 15082.343618869781,
+  "device": "cuda:0",
+  "gpu": "Tesla T4",
+  "torch": "2.11.0+cu130",
+  "final_train_loss": 0.04097988689416319,
+  "final_val_loss": 0.043825758089853124
+}

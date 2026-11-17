@@ -1,0 +1,18 @@
+{
+  "model_name": "Branch_Encoder_Decoder_attention",
+  "bottleneck": "attention",
+  "torch_seed": 99,
+  "epochs": 100,
+  "subset": null,
+  "data": "/kaggle/input/datasets/prabhanshu22/instance-mixtures-snr40/training_datasets_INSTANCE_snr40.hdf5",
+  "presplit": true,
+  "n_train": 18000,
+  "n_val": 6000,
+  "n_params": 111370,
+  "runtime_s": 1983.2541933059692,
+  "device": "cuda:0",
+  "gpu": "Tesla T4",
+  "torch": "2.11.0+cu130",
+  "final_train_loss": 0.047787926990537556,
+  "final_val_loss": 0.060475236855553824
+}

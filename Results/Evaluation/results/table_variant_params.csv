@@ -1,0 +1,10 @@
+bottleneck,params,kind,params_measured_phase1,batch_dep_max_abs_diff
+None,78090,paper,78090,0.0
+Linear,86410,paper,86410,0.0
+LSTM,178442,paper,178442,2.7755575615628914e-17
+attention,111370,paper,111370,0.0
+Transformer,640394,paper,640394,0.00011579855400500882
+attention_PE,111370,new,,0.0
+attention_LSTM,161546,new,,5.551115123125783e-17
+hybrid,144906,new,,4.163336342344337e-17
+Transformer_fixed,178058,new,,0.0

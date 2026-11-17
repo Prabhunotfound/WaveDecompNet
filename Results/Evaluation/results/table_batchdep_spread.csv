@@ -1,0 +1,3 @@
+model_id,bottleneck,test_set,n_perms,batch_size,median_ev_spread_across_perms,per_row_spread_mean,per_row_spread_p95,per_row_spread_max
+stead_Transformer_seed99,Transformer,STEAD,5,128,0.00099262134979472,2.131188882710735e+53,4.887739010626411,4.364674831791585e+56
+stead_attention_seed99,attention,STEAD,5,128,0.0,0.0,0.0,0.0

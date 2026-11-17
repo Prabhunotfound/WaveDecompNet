@@ -1,0 +1,11 @@
+model_id,bottleneck,test_set,batch_size,permutation,ordering,median_ev_eq
+stead_Transformer_seed99,Transformer,STEAD,128,0,file order,0.9556109632428404
+stead_Transformer_seed99,Transformer,STEAD,128,1,shuffled,0.9554263089559176
+stead_Transformer_seed99,Transformer,STEAD,128,2,shuffled,0.9548767144838484
+stead_Transformer_seed99,Transformer,STEAD,128,3,shuffled,0.9558693358336431
+stead_Transformer_seed99,Transformer,STEAD,128,4,shuffled,0.9552087670449159
+stead_attention_seed99,attention,STEAD,128,0,file order,0.9761938317649352
+stead_attention_seed99,attention,STEAD,128,1,shuffled,0.9761938317649352
+stead_attention_seed99,attention,STEAD,128,2,shuffled,0.9761938317649352
+stead_attention_seed99,attention,STEAD,128,3,shuffled,0.9761938317649352
+stead_attention_seed99,attention,STEAD,128,4,shuffled,0.9761938317649352

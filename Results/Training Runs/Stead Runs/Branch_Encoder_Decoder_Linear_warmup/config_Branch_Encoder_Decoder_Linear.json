@@ -1,0 +1,15 @@
+{
+  "git_hash": "afe2536cf29ead8b4d8d5c50ddf85cc1dd90ddd1",
+  "seed": 99,
+  "bottleneck": "Linear",
+  "dataset": "/kaggle/input/datasets/prabhanshu22/wdn-training-data/training_datasets_all_snr_40_unshuffled.hdf5",
+  "torch": "2.11.0+cu130",
+  "gpu": "Tesla T4",
+  "numpy": "2.1.3",
+  "python": "3.13.16",
+  "script_sha": {
+    "config.py": "146bcb7aa227c74e",
+    "step3_training_1D.py": "1e186284c55e79d2"
+  },
+  "date_utc": "2026-11-07T00:02:50.306208+00:00"
+}
