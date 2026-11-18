@@ -11,7 +11,7 @@ All training and evaluation ran on Kaggle, except step 1, which ran on a local P
 | 1 | `01_build_stead_subset` | Local PC | downloads the six STEAD chunks and keeps the needed traces |
 | 2 | `02_prepare_stead_data` | Kaggle | authors' `step2a` to `step2d`: POHA noise download, mixtures, final file |
 | 3 | `03_train_stead_models` | Kaggle | trains the five paper bottlenecks on STEAD, evaluates them |
-| 4 | `04_inspect_instance` (optional) | Kaggle | reads the INSTANCE sample, changes nothing |
+| 4 | `04_inspect_instance`  | Kaggle | reads the INSTANCE sample, changes nothing |
 | 5 | `05_build_instance_mixtures` | Kaggle | builds the INSTANCE mixtures |
 | 6 | `06_train_instance_models` | Kaggle | trains the five paper bottlenecks on INSTANCE |
 | 7 | `07_variants_and_evaluation` | Kaggle | self-test, batch-size test, trains the four variants, scores every model, figures |
@@ -39,7 +39,7 @@ Attach the STEAD mixtures dataset. Settings are at the top of the notebook:
 Run the notebook once for each of the five bottlenecks.
 
 ### Steps 4 and 5: INSTANCE
-Both need Internet on, because they download the INSTANCE sample. Step 4 only inspects; its summary explains the choices made in step 5. In step 5 the settings cell holds `N_MIXTURES = 30000`, `SNR_MIN_DB = 40`, `PRE_P_S = 10`, `NOISE_WINDOWS = 2` and `EXCLUDE_SOURCE_IDS = [1116011]`.
+Both need Internet on, because they download the INSTANCE sample. Step 4 only inspects; its summary explains the choices made in step 5.
 
 ### Step 6: `06_train_instance_models`
 Same as step 3, but it reads the INSTANCE mixtures and uses the split stored in the file (`presplit: true` in each `run_info.json`). One bottleneck per session.
