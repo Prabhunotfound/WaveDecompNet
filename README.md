@@ -45,10 +45,10 @@ Each run folder holds the model weights (`.pth`), the training history (`.hdf5` 
 |---|---|
 | `01_build_stead_subset` | builds the STEAD subset from the six archive chunks |
 | `02_prepare_stead_data` | builds the STEAD training mixtures with the authors' scripts |
-| `03_inspect_instance` | inspects the INSTANCE sample (optional) |
-| `04_build_instance_mixtures` | builds the INSTANCE mixtures |
-| `05_train_instance_models` | trains the five paper bottlenecks on INSTANCE |
-| `06_train_paper_models` | trains and evaluates the five paper bottlenecks on STEAD |
+| `03_train_stead_models` | trains and evaluates the five paper bottlenecks on STEAD |
+| `04_inspect_instance` | inspects the INSTANCE sample (optional) |
+| `05_build_instance_mixtures` | builds the INSTANCE mixtures |
+| `06_train_instance_models` | trains the five paper bottlenecks on INSTANCE |
 | `07_variants_and_evaluation` | trains the four variants, scores every model, makes the figures |
 
 ## Credits and licences
