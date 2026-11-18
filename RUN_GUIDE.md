@@ -1,6 +1,6 @@
 # Run guide
 
-How to reproduce the results, in order. Notebook names refer to the `notebooks/` folder. Data links are in `data/Data_Info.md`.
+How to reproduce the results, in order. Notebook names refer to the `Notebooks/` folder. Data links are in `Data/Data_Info.md`.
 
 All training and evaluation ran on Kaggle, except step 1, which ran on a local PC. All runs use seed 99. The authors' code is cloned from https://github.com/yinjiuxun/WaveDecompNet-paper .
 
@@ -65,7 +65,7 @@ Evaluate only after all runs are attached.
 | Kaggle dataset | Holds | Needed by |
 |---|---|---|
 | `DAT_Repo_Data` | the STEAD subset (`merged.csv`, `merged.hdf5`) | 02 |
-| `wdn-code` | the authors' code with our patches (`code/` in this submission) | 02, 03 |
+| `wdn-code` | the authors' code with our patches (`Author_Code/` in this submission) | 02, 03 |
 | `wdn-training-data` | the STEAD mixtures | 03, 07 |
 | `instance-mixtures-snr40` | the INSTANCE mixtures | 06, 07 |
 | training run datasets (for example `wdn-runs-seed99`) | the run folders in `results/training_runs/` | 03 (`RUN_PART_C`), 07 |
