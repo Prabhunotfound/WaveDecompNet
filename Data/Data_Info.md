@@ -88,3 +88,20 @@ Michelini, A., Cianetti, S., Gaviano, S., Giunchi, C., Jozinović, D., Lauciani,
 **STEAD:** Mousavi, S. M., Sheng, Y., Zhu, W., Beroza, G. C. (2019). STanford EArthquake Dataset (STEAD): A global data set of seismic signals for AI. *IEEE Access*, 7, 179464-179476.
 
 **WaveDecompNet:** https://github.com/yinjiuxun/WaveDecompNet-paper
+
+**Real continuous data (section 5):** waveforms from the HV and IU networks via FDSN (EarthScope, IRIS); catalogue `catalog_local.20210731-20210901.xml` from the WaveDecompNet repository.
+
+---
+
+## 5. Real continuous data 
+
+Used only for the detection test. Nothing here is a mixture and nothing is used for training. The data are downloaded by the notebook and are not stored in this submission.
+
+| Item | Value |
+|---|---|
+| Stations | HV.HAT , IU.POHA |
+| Period | 2021-08-02, 14 days |
+| Source | FDSN clients EarthScope and IRIS |
+| Catalogue | `catalog_local.20210731-20210901.xml` from the authors' repository, events within 5 degrees of the station |
+
+**Synthetic streams.** Long streams with known onsets, built by the same notebook from the STEAD and INSTANCE test splits. They use no new data. The streams and their event tables are in `Results/Real Data Evaluation/Results/synth/`.
