@@ -15,6 +15,7 @@ All training and evaluation ran on Kaggle, except step 1, which ran on a local P
 | 5 | `05_build_instance_mixtures` | Kaggle | builds the INSTANCE mixtures |
 | 6 | `06_train_instance_models` | Kaggle | trains the five paper bottlenecks on INSTANCE |
 | 7 | `07_variants_and_evaluation` | Kaggle | self-test, batch-size test, trains the four variants, scores every model, figures |
+| 8 | `08_real_data_all_models` | Kaggle | STA/LTA detection with every model on real continuous data and on synthetic streams |
 
 ## 2. Step by step
 
@@ -60,12 +61,25 @@ Attach the STEAD data, the INSTANCE data and every training run. Settings:
 
 Evaluate only after all runs are attached.
 
+### Step 8: `08_real_data_all_models`
+Attach the STEAD data, the INSTANCE data and every training run.  Settings:
+
+| Switch | Meaning |
+|---|---|
+| `RUN_SELFTEST` | loads every model, checks shapes, STA/LTA against ObsPy and exact stitching |
+| `RUN_DOWNLOAD` | continuous data, station metadata, catalogue, travel times |
+| `RUN_REAL` | separates the real data with every model, STA/LTA sweep, catalogue matching |
+| `RUN_SYNTH` | long synthetic streams with known onsets, same pipeline |
+| `RUN_FIGURES` | tables and figures |
+| `RUN_PAPER_FIGS` | STA/LTA figures in the layout of the paper |
+| `RESUME` | skips models that already have results |
+
 ## 3. Kaggle datasets used as inputs
 
-| Kaggle dataset | Holds | Needed by |
-|---|---|---|
-| `DAT_Repo_Data` | the STEAD subset (`merged.csv`, `merged.hdf5`) | 02 |
-| `wdn-code` | the authors' code with our patches (`Author_Code/` in this submission) | 02, 03 |
-| `wdn-training-data` | the STEAD mixtures | 03, 07 |
-| `instance-mixtures-snr40` | the INSTANCE mixtures | 06, 07 |
-| training run datasets (for example `wdn-runs-seed99`) | the run folders in `results/training_runs/` | 03 (`RUN_PART_C`), 07 |
+| Kaggle dataset | Holds | 
+|---|---|
+| `DAT_Repo_Data` | the STEAD subset (`merged.csv`, `merged.hdf5`) |
+| `wdn-code` | the authors' code with our patches (`Author_Code/` in this submission) | 
+| `wdn-training-data` | the STEAD mixtures |
+| `instance-mixtures-snr40` | the INSTANCE mixtures |
+|  `wdn-runs-all` | the run folders in `results/training_runs/` |
