@@ -7,6 +7,7 @@ This project reproduces **WaveDecompNet**, a neural network that separates a 3-c
 1. **Reproduction.** The authors' pipeline was rebuilt on STEAD data and run with their five bottleneck variants (None, Linear, LSTM, attention, Transformer), and compared with their released weights.
 2. **New dataset.** The same architecture was trained and tested on the INSTANCE dataset, and the STEAD-trained models were tested on INSTANCE data.
 3. **Architecture variants.** Four new bottlenecks (`attention_PE`, `attention_LSTM`, `hybrid`, `Transformer_fixed`) were trained on STEAD and evaluated against the original five on both test sets.
+4. **Detection on real and synthetic streams.** STA/LTA event detection was run on raw data, on band-passed data and on the output of every model (the authors' pretrained models and all models trained here). The real data are 14 days of continuous recordings from two Hawaii stations (HV.HAT, IU.POHA), scored against an earthquake catalogue. The synthetic data are long streams built from the STEAD and INSTANCE test splits, with known onsets.
 
 The analysis and conclusions are in the report.
 
@@ -23,8 +24,11 @@ The analysis and conclusions are in the report.
 ├── Notebooks/                
 └── Results/
     ├── Evaluation/
-    │   ├── figures/
-    │   └── results/
+    │   ├── Figures/
+    │   └── Results/
+    ├── Real Data Evaluation/
+    │   ├── Figures/
+    │   └── Results/
     └── Training Runs/
         ├── Stead Runs/       5 runs: the paper bottlenecks trained on STEAD
         ├── Instance Runs/    5 runs: the paper bottlenecks trained on INSTANCE
@@ -38,6 +42,7 @@ Each run folder holds the model weights (`.pth`), the training history (`.hdf5` 
 - To rerun the work: `RUN_GUIDE.md`.
 - To find the data: `Data/Data_Info.md`. The data files are not in this submission; they are on Kaggle.
 - To check the results: `Results/Evaluation/results/` for the tables and `Results/Evaluation/figures/` for the figures.
+- To check the detection results: `Results/Real Data Evaluation/Results/` for the tables (`table_real_*.csv`, `table_synth.csv`) and `Results/Real Data Evaluation/Figures/` for the figures.
 
 ## Notebooks
 
@@ -50,6 +55,7 @@ Each run folder holds the model weights (`.pth`), the training history (`.hdf5` 
 | `05_build_instance_mixtures` | builds the INSTANCE mixtures |
 | `06_train_instance_models` | trains the five paper bottlenecks on INSTANCE |
 | `07_variants_and_evaluation` | trains the four variants, scores every model, makes the figures |
+| `08_real_data_all_models` | STA/LTA detection with every model on real continuous data and on synthetic streams |
 
 ## Credits and licences
 - WaveDecompNet code: https://github.com/yinjiuxun/WaveDecompNet-paper, commit `afe2536cf29ead8b4d8d5c50ddf85cc1dd90ddd1` [add the repository licence and the paper citation].
