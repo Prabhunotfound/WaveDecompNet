@@ -1,0 +1,20 @@
+model_id,group,kind,bottleneck,trained_on,n_params,status,path
+stead_None_seed99,stead,paper,None,STEAD,78090,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Stead Runs/Branch_Encoder_Decoder_None_warmup/Branch_Encoder_Decoder_None_Model.pth
+stead_Linear_seed99,stead,paper,Linear,STEAD,86410,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Stead Runs/Branch_Encoder_Decoder_Linear_warmup/Branch_Encoder_Decoder_Linear_Model.pth
+stead_LSTM_seed99,stead,paper,LSTM,STEAD,178442,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Stead Runs/Branch_Encoder_Decoder_LSTM_warmup/Branch_Encoder_Decoder_LSTM_Model.pth
+stead_attention_seed99,stead,paper,attention,STEAD,111370,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Stead Runs/Branch_Encoder_Decoder_attention_warmup/Branch_Encoder_Decoder_attention_Model.pth
+stead_Transformer_seed99,stead,paper,Transformer,STEAD,640394,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Stead Runs/Branch_Encoder_Decoder_Transformer_warmup/Branch_Encoder_Decoder_Transformer_Model.pth
+instance_None_seed99,instance,paper,None,INSTANCE,78090,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Instance Runs/Branch_Encoder_Decoder_None_instance/Branch_Encoder_Decoder_None_Model.pth
+instance_Linear_seed99,instance,paper,Linear,INSTANCE,86410,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Instance Runs/Branch_Encoder_Decoder_Linear_instance/Branch_Encoder_Decoder_Linear_Model.pth
+instance_LSTM_seed99,instance,paper,LSTM,INSTANCE,178442,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Instance Runs/Branch_Encoder_Decoder_LSTM_instance/Branch_Encoder_Decoder_LSTM_Model.pth
+instance_attention_seed99,instance,paper,attention,INSTANCE,111370,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Instance Runs/Branch_Encoder_Decoder_attention_instance/Branch_Encoder_Decoder_attention_Model.pth
+instance_Transformer_seed99,instance,paper,Transformer,INSTANCE,640394,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Instance Runs/Branch_Encoder_Decoder_Transformer_instance/Branch_Encoder_Decoder_Transformer_Model.pth
+stead_attention_PE_seed99,variant,new,attention_PE,STEAD,111370,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Variant Runs/Branch_Encoder_Decoder_attention_PE_warmup/Branch_Encoder_Decoder_attention_PE_Model.pth
+stead_attention_LSTM_seed99,variant,new,attention_LSTM,STEAD,161546,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Variant Runs/Branch_Encoder_Decoder_attention_LSTM_warmup/Branch_Encoder_Decoder_attention_LSTM_Model.pth
+stead_hybrid_seed99,variant,new,hybrid,STEAD,144906,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Variant Runs/Branch_Encoder_Decoder_hybrid_warmup/Branch_Encoder_Decoder_hybrid_Model.pth
+stead_Transformer_fixed_seed99,variant,new,Transformer_fixed,STEAD,178058,ok,/kaggle/input/datasets/prabhanshu22/wdn-runs-all/Training Runs/Variant Runs/Branch_Encoder_Decoder_Transformer_fixed_warmup/Branch_Encoder_Decoder_Transformer_fixed_Model.pth
+pretrained_None,pretrained,pretrained,None,AUTHORS,78090,ok,/kaggle/temp/WaveDecompNet-paper/trained_models/Branch_Encoder_Decoder_None/Branch_Encoder_Decoder_None_Model.pth
+pretrained_Linear,pretrained,pretrained,Linear,AUTHORS,86410,ok,/kaggle/temp/WaveDecompNet-paper/trained_models/Branch_Encoder_Decoder_Linear/Branch_Encoder_Decoder_Linear_Model.pth
+pretrained_LSTM,pretrained,pretrained,LSTM,AUTHORS,178442,ok,/kaggle/temp/WaveDecompNet-paper/trained_models/Branch_Encoder_Decoder_LSTM/Branch_Encoder_Decoder_LSTM_Model.pth
+pretrained_attention,pretrained,pretrained,attention,AUTHORS,111370,ok,/kaggle/temp/WaveDecompNet-paper/trained_models/Branch_Encoder_Decoder_attention/Branch_Encoder_Decoder_attention_Model.pth
+pretrained_Transformer,pretrained,pretrained,Transformer,AUTHORS,640394,ok,/kaggle/temp/WaveDecompNet-paper/trained_models/Branch_Encoder_Decoder_Transformer/Branch_Encoder_Decoder_Transformer_Model.pth
