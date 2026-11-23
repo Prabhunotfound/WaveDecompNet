@@ -12,12 +12,12 @@ h5py==3.16.0
 matplotlib
 
 # training, INSTANCE build and evaluation (Kaggle)
-torch==2.11.0        # Kaggle build 2.11.0+cu130, Tesla T4
+torch==2.11.0
 scipy
-scikit-learn         # explained_variance_score, train/test split
-psutil               # dat-none-linear
+scikit-learn
+psutil
 
 # STEAD preparation
-gdown==6.5.1         # 01_build_stead_subset (local PC)
-obspy                # installed by 02_prepare_stead_data (pip install -q obspy torchinfo)
+gdown==6.5.1
+obspy
 torchinfo
