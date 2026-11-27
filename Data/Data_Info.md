@@ -2,7 +2,7 @@
 
 The data files are **not included** in this submission because of their size. They are available as Kaggle datasets (links below) and can be rebuilt from the original sources with the notebooks in `Notebooks/`.
 
-All training and evaluation data are **mixtures**: a 60 s, 3-component earthquake waveform plus a 60 s, 3-component noise waveform, both at 10 Hz. Each mixture has two targets: the earthquake alone and the noise alone. The exploration mixtures (section 4) follow the same file format, but each window is 600 samples at the native sampling interval of the survey, and the three channels are three adjacent traces.
+All training and evaluation data are **mixtures**: a 60 s, 3-component earthquake waveform plus a 60 s, 3-component noise waveform, both at 10 Hz. Each mixture has two targets: the earthquake alone and the noise alone. The exploration mixtures (section 5) follow the same file format, but each window is 600 samples at the native sampling interval of the survey, and the three channels are three adjacent traces.
 
 ---
 
@@ -76,7 +76,21 @@ Project page: https://github.com/smousavi05/STEAD
 
 ---
 
-## 4. Exploration datasets
+## 4. Real continuous data (HV.HAT and IU.POHA)
+
+Two Hawaii stations, downloaded from IRIS (FDSN) and resampled to 10 Hz.
+
+| | `IU.POHA` | `HV.HAT` |
+|---|---|---|
+| Channels | `BH1`, `BH2`, `BHZ` (location `00`, 40 Hz) | `HHE`, `HHN`, `HHZ` |
+| Noise for training | 2021-06-01 to 2021-07-31: 87,191 noise windows of 60 s, 87,000 used in the STEAD mixtures (`02_prepare_stead_data.ipynb`) | NA  |
+| Detection test | 2021-08-02, 14 days (`08_real_data_all_models.ipynb`) | same period |
+
+Catalogue for the detection test: `catalog_local.20210731-20210901.xml` from the WaveDecompNet repository, 483 events, M 1.5 to 4.0.
+
+---
+
+## 5. Exploration datasets
 
 Three exploration seismic surveys, used to train and test the final LSTM model. Built by `09_build_exploration_mixtures.ipynb` with the recipe of the INSTANCE build. The raw files are downloaded by the notebook (Internet on) and are not stored in this submission.
 
@@ -95,7 +109,7 @@ Three exploration seismic surveys, used to train and test the final LSTM model. 
 
 ---
 
-## 5. Sources and licences
+## 6. Sources and licences
 
 **INSTANCE:** https://www.pi.ingv.it/instance/ (sample file Instance_sample_dataset_v3.tar.bz2), licence CC BY 4.0, dataset DOI 10.13127/instance.
 Michelini, A., Cianetti, S., Gaviano, S., Giunchi, C., Jozinović, D., Lauciani, V. (2021). INSTANCE, the Italian seismic dataset for machine learning. *Earth System Science Data*, 13(12), 5509-5544. doi:10.5194/essd-13-5509-2021
@@ -110,4 +124,4 @@ Michelini, A., Cianetti, S., Gaviano, S., Giunchi, C., Jozinović, D., Lauciani,
 
 **Stratton 3D (`STR3D`):** http://s3.amazonaws.com/open.source.geoscience/open_data/stratton/segy/processed/Stratton3D_32bit.sgy, Bureau of Economic Geology, University of Texas at Austin
 
-**Real continuous data :** waveforms from the HV and IU networks via FDSN (EarthScope, IRIS); catalogue `catalog_local.20210731-20210901.xml` from the WaveDecompNet repository.
+**Real continuous data (section 4):** waveforms from the HV and IU networks via FDSN (EarthScope, IRIS); catalogue `catalog_local.20210731-20210901.xml` from the WaveDecompNet repository.
