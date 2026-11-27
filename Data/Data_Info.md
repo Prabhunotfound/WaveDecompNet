@@ -110,4 +110,4 @@ Michelini, A., Cianetti, S., Gaviano, S., Giunchi, C., Jozinović, D., Lauciani,
 
 **Stratton 3D (`STR3D`):** http://s3.amazonaws.com/open.source.geoscience/open_data/stratton/segy/processed/Stratton3D_32bit.sgy, Bureau of Economic Geology, University of Texas at Austin
 
-**Real continuous data (section 6):** waveforms from the HV and IU networks via FDSN (EarthScope, IRIS); catalogue `catalog_local.20210731-20210901.xml` from the WaveDecompNet repository.
+**Real continuous data :** waveforms from the HV and IU networks via FDSN (EarthScope, IRIS); catalogue `catalog_local.20210731-20210901.xml` from the WaveDecompNet repository.
