@@ -1,0 +1,18 @@
+{
+  "model_name": "Branch_Encoder_Decoder_LSTM",
+  "bottleneck": "LSTM",
+  "torch_seed": 99,
+  "epochs": 100,
+  "subset": null,
+  "data": "/kaggle/input/datasets/prabhanshu22/wdn-exploration-mixtures/training_datasets_F3.hdf5",
+  "presplit": true,
+  "n_train": 18000,
+  "n_val": 6000,
+  "n_params": 178442,
+  "runtime_s": 2533.8741693496704,
+  "device": "cuda:0",
+  "gpu": "Tesla T4",
+  "torch": "2.11.0+cu130",
+  "final_train_loss": 0.05991464284832492,
+  "final_val_loss": 0.06406484963986421
+}
