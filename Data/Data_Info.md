@@ -1,8 +1,8 @@
 # Data
 
-The data files are **not included** in this submission because of their size. They are available as Kaggle datasets (links below) and can be rebuilt from the original sources with the notebooks in `notebooks/`.
+The data files are **not included** in this submission because of their size. They are available as Kaggle datasets (links below) and can be rebuilt from the original sources with the notebooks in `Notebooks/`.
 
-All training and evaluation data are **mixtures**: a 60 s, 3-component earthquake waveform plus a 60 s, 3-component noise waveform, both at 10 Hz. Each mixture has two targets: the earthquake alone and the noise alone.
+All training and evaluation data are **mixtures**: a 60 s, 3-component earthquake waveform plus a 60 s, 3-component noise waveform, both at 10 Hz. Each mixture has two targets: the earthquake alone and the noise alone. The exploration mixtures (section 4) follow the same file format, but each window is 600 samples at the native sampling interval of the survey, and the three channels are three adjacent traces.
 
 ---
 
@@ -12,10 +12,12 @@ All training and evaluation data are **mixtures**: a 60 s, 3-component earthquak
 |---|---|---|---|
 | STEAD data | STEAD-trained models | https://www.kaggle.com/datasets/prabhanshu22/wdn-training-data | `01_build_stead_subset.ipynb`, `02_prepare_stead_data.ipynb` |
 | INSTANCE mixtures | INSTANCE-trained models; cross-dataset testing | https://www.kaggle.com/datasets/prabhanshu22/instance-mixtures-snr40 | `05_build_instance_mixtures.ipynb` |
+| Exploration mixtures | VG2D, F3 and STR3D models; cross-dataset testing | https://www.kaggle.com/datasets/prabhanshu22/wdn-exploration-mixtures | `09_build_exploration_mixtures.ipynb` |
 
-**Access:** [public, or shared with which Kaggle account]
 
 **Contents of the STEAD Kaggle dataset:** [subset (`merged.csv`, `merged.hdf5`), mixture file, or both]
+
+**Contents of the exploration Kaggle dataset:** the three `training_datasets_<CODE>.hdf5` files (`VG2D`, `F3`, `STR3D`), `build_report_<CODE>.json`, `inspect_headers.json`, `exploration_build_summary.csv` and the check figures.
 
 The exact paths used for each run are saved in that run's `run_info.json`.
 
@@ -80,7 +82,26 @@ Project page: https://github.com/smousavi05/STEAD
 
 ---
 
-## 4. Sources and licences
+## 4. Exploration datasets
+
+Three exploration seismic surveys, used to train and test the final LSTM model. Built by `09_build_exploration_mixtures.ipynb` with the recipe of the INSTANCE build. The raw files are downloaded by the notebook (Internet on) and are not stored in this submission.
+
+| | `VG2D` | `F3` | `STR3D` |
+|---|---|---|---|
+| Category | 2D marine | 3D marine | 3D land |
+| Survey | Mobil AVO Viking Graben line 12 | F3 Netherlands (facies-classification benchmark, Zenodo 3755060) | Stratton 3D (Bureau of Economic Geology, UT Austin) |
+| File used | `seismic.segy`, raw prestack shot gathers (about 750 MB; 1,001 shots x 120 channels, 1,500 samples, 4 ms) | `seismic_entire_volume.npy` inside `raw.zip` (1.08 GB; 601 inlines x 901 crosslines x 255 samples, float64) | `Stratton3D_32bit.sgy`, processed volume (444 MB; 1,501 samples, 2 ms) |
+| Signal | brute stack built in the notebook from the raw gathers (no stack is published) | post-stack volume, up-sampled x3 to reach 600 samples | processed volume |
+| Noise | real: the part of the raw traces before the first break (automatic pick); segments shorter than 600 samples are mirror-padded | synthetic: band-limited Gaussian noise, low-frequency swell bursts and spikes | synthetic (no unfiltered volume is published) |
+| Sampling interval | 4 ms | 4 ms, set with `--dt-override` (not stored in the file) | 2 ms |
+| Spatial block / guard (split) | 100 CDPs / 2 | 20 inlines / 1 | 20 lines / 1 |
+| File | `training_datasets_VG2D.hdf5` | `training_datasets_F3.hdf5` | `training_datasets_STR3D.hdf5` |
+| Build record | `build_report_VG2D.json` | `build_report_F3.json` | `build_report_STR3D.json` |
+
+
+---
+
+## 5. Sources and licences
 
 **INSTANCE:** https://www.pi.ingv.it/instance/ (sample file Instance_sample_dataset_v3.tar.bz2), licence CC BY 4.0, dataset DOI 10.13127/instance.
 Michelini, A., Cianetti, S., Gaviano, S., Giunchi, C., Jozinović, D., Lauciani, V. (2021). INSTANCE, the Italian seismic dataset for machine learning. *Earth System Science Data*, 13(12), 5509-5544. doi:10.5194/essd-13-5509-2021
@@ -89,19 +110,10 @@ Michelini, A., Cianetti, S., Gaviano, S., Giunchi, C., Jozinović, D., Lauciani,
 
 **WaveDecompNet:** https://github.com/yinjiuxun/WaveDecompNet-paper
 
-**Real continuous data (section 5):** waveforms from the HV and IU networks via FDSN (EarthScope, IRIS); catalogue `catalog_local.20210731-20210901.xml` from the WaveDecompNet repository.
+**Mobil AVO Viking Graben line 12 (`VG2D`):** http://s3.amazonaws.com/open.source.geoscience/open_data/Mobil_Avo_Viking_Graben_Line_12/seismic.segy [add the citation and licence]
 
----
+**F3 Netherlands (`F3`):** https://zenodo.org/records/3755060 (file `raw.zip`), benchmark licence MIT; F3 data CC BY-SA 3.0, dGB Earth Sciences / NAM [add the benchmark paper citation]. Because of the share-alike term, the F3 mixtures are shared under the same licence.
 
-## 5. Real continuous data 
+**Stratton 3D (`STR3D`):** http://s3.amazonaws.com/open.source.geoscience/open_data/stratton/segy/processed/Stratton3D_32bit.sgy, Bureau of Economic Geology, University of Texas at Austin [add the citation and licence]
 
-Used only for the detection test. Nothing here is a mixture and nothing is used for training. The data are downloaded by the notebook and are not stored in this submission.
-
-| Item | Value |
-|---|---|
-| Stations | HV.HAT , IU.POHA |
-| Period | 2021-08-02, 14 days |
-| Source | FDSN clients EarthScope and IRIS |
-| Catalogue | `catalog_local.20210731-20210901.xml` from the authors' repository, events within 5 degrees of the station |
-
-**Synthetic streams.** Long streams with known onsets, built by the same notebook from the STEAD and INSTANCE test splits. They use no new data. The streams and their event tables are in `Results/Real Data Evaluation/Results/synth/`.
+**Real continuous data (section 6):** waveforms from the HV and IU networks via FDSN (EarthScope, IRIS); catalogue `catalog_local.20210731-20210901.xml` from the WaveDecompNet repository.
