@@ -1,6 +1,0 @@
-case,origin,mag,dist_km,tP_s,raw,bandpass,model
-detected_by_both,2021-08-03T12:08:04.660000Z,3.14,79.79028256534171,130098.48442750007,True,True,True
-separated_only,2021-08-12T06:41:19.700000Z,3.1,64.82461744341525,888091.5969628392,False,True,True
-separated_only,2021-08-15T01:20:26.520000Z,2.13000011,64.0149554673127,1128038.3065376384,False,False,True
-missed_by_model,2021-08-14T23:42:54.160000Z,4.0,63.98764517855425,1122185.8351022513,True,True,False
-uncatalogued_trigger,,,,729732.8,False,False,True
