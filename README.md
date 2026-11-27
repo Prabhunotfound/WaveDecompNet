@@ -58,6 +58,6 @@ The analysis and conclusions are in the report.
 - WaveDecompNet code: https://github.com/yinjiuxun/WaveDecompNet-paper, commit `afe2536cf29ead8b4d8d5c50ddf85cc1dd90ddd1` .
 - STEAD: Mousavi et al. (2019), *IEEE Access* 7, 179464-179476 .
 - INSTANCE: Michelini et al. (2021), *Earth System Science Data* 13(12), 5509-5544, doi:10.5194/essd-13-5509-2021; licence CC BY 4.0.
-- Mobil AVO Viking Graben line 12 (VG2D): raw shot gathers from the open.source.geoscience data repository [add the source citation and licence].
-- F3 Netherlands (F3): full volume from the F3 facies-classification benchmark, Zenodo 3755060 (MIT) [add the benchmark paper citation]. The F3 data are CC BY-SA 3.0 (dGB Earth Sciences / NAM), so the F3 mixtures are shared under the same licence.
-- Stratton 3D (STR3D): Bureau of Economic Geology, University of Texas at Austin [add the source citation and licence].
+- Mobil AVO Viking Graben line 12 (VG2D): raw shot gathers from the open.source.geoscience data repository.
+- F3 Netherlands (F3): full volume from the F3 facies-classification benchmark, Zenodo 3755060 (MIT). The F3 data are CC BY-SA 3.0 (dGB Earth Sciences / NAM), so the F3 mixtures are shared under the same licence.
+- Stratton 3D (STR3D): Bureau of Economic Geology, University of Texas at Austin.
