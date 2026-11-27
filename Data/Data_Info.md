@@ -14,11 +14,6 @@ All training and evaluation data are **mixtures**: a 60 s, 3-component earthquak
 | INSTANCE mixtures | INSTANCE-trained models; cross-dataset testing | https://www.kaggle.com/datasets/prabhanshu22/instance-mixtures-snr40 | `05_build_instance_mixtures.ipynb` |
 | Exploration mixtures | VG2D, F3 and STR3D models; cross-dataset testing | https://www.kaggle.com/datasets/prabhanshu22/wdn-exploration-mixtures | `09_build_exploration_mixtures.ipynb` |
 
-
-**Contents of the STEAD Kaggle dataset:** [subset (`merged.csv`, `merged.hdf5`), mixture file, or both]
-
-**Contents of the exploration Kaggle dataset:** the three `training_datasets_<CODE>.hdf5` files (`VG2D`, `F3`, `STR3D`), `build_report_<CODE>.json`, `inspect_headers.json`, `exploration_build_summary.csv` and the check figures.
-
 The exact paths used for each run are saved in that run's `run_info.json`.
 
 ---
@@ -49,10 +44,9 @@ Project page: https://github.com/smousavi05/STEAD
 
 | Item | Value |
 |---|---|
-| Mixtures | 187,000 [100,000 with STEAD noise and 87,000 with POHA noise; confirm] |
+| Mixtures | 187,000 [100,000 with STEAD noise and 87,000 with POHA noise] |
 | Variant | SNR 40, downsampled to 10 Hz |
 | Split | 60 / 20 / 20 after mixing: 112,200 train, 37,400 validation, 37,400 test |
-| File | [file name] |
 
 ---
 
@@ -110,10 +104,10 @@ Michelini, A., Cianetti, S., Gaviano, S., Giunchi, C., Jozinović, D., Lauciani,
 
 **WaveDecompNet:** https://github.com/yinjiuxun/WaveDecompNet-paper
 
-**Mobil AVO Viking Graben line 12 (`VG2D`):** http://s3.amazonaws.com/open.source.geoscience/open_data/Mobil_Avo_Viking_Graben_Line_12/seismic.segy [add the citation and licence]
+**Mobil AVO Viking Graben line 12 (`VG2D`):** http://s3.amazonaws.com/open.source.geoscience/open_data/Mobil_Avo_Viking_Graben_Line_12/seismic.segy 
 
-**F3 Netherlands (`F3`):** https://zenodo.org/records/3755060 (file `raw.zip`), benchmark licence MIT; F3 data CC BY-SA 3.0, dGB Earth Sciences / NAM [add the benchmark paper citation]. Because of the share-alike term, the F3 mixtures are shared under the same licence.
+**F3 Netherlands (`F3`):** https://zenodo.org/records/3755060 (file `raw.zip`), benchmark licence MIT; F3 data CC BY-SA 3.0, dGB Earth Sciences / NAM. Because of the share-alike term, the F3 mixtures are shared under the same licence.
 
-**Stratton 3D (`STR3D`):** http://s3.amazonaws.com/open.source.geoscience/open_data/stratton/segy/processed/Stratton3D_32bit.sgy, Bureau of Economic Geology, University of Texas at Austin [add the citation and licence]
+**Stratton 3D (`STR3D`):** http://s3.amazonaws.com/open.source.geoscience/open_data/stratton/segy/processed/Stratton3D_32bit.sgy, Bureau of Economic Geology, University of Texas at Austin
 
 **Real continuous data (section 6):** waveforms from the HV and IU networks via FDSN (EarthScope, IRIS); catalogue `catalog_local.20210731-20210901.xml` from the WaveDecompNet repository.
